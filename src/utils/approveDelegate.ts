@@ -2,7 +2,7 @@ import { Connection, PublicKey, Transaction } from '@solana/web3.js';
 import { getAssociatedTokenAddress, createApproveInstruction } from '@solana/spl-token';
 
 const BATCH_SIZE = 20; // Process 20 NFTs per transaction
-const CHUNK_SIZE = 1000; // User confirms once per 500 NFTs
+const CHUNK_SIZE = 500; // User confirms once per 500 NFTs
 const MAX_RETRIES = 3; // Number of auto-retry attempts for blockhash errors
 const PARALLEL_BATCH_SIZE = 5; // Number of transactions to send in parallel
 const RATE_LIMIT_DELAY = 200; // Delay between batches in ms
